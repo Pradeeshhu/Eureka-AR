@@ -90,19 +90,19 @@ header {
 }
 
 #banner-image-1 {
-    background-image: url('/images/image1.jpg');
+    background-image: url('images/image1.jpg');
 }
 
 #banner-image-2 {
-    background-image: url('/images/image2.jpg');
+    background-image: url('images/image2.jpg');
 }
 
 #banner-image-3 {
-    background-image: url('/images/image3.jpg');
+    background-image: url('images/image3.jpg');
 }
 
 #banner-image-4 {
-    background-image: url('/images/image4.jpg');
+    background-image: url('images/image4.jpg');
 }
 
 .banner-image.active {
