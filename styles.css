@@ -154,11 +154,11 @@ header {
 /* Image Row styles */
 .image-row {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-    background-color: #fff; /* Change background color if needed */
-    gap: -500px; /* Adjust gap as needed */
+    padding: 50px 200px;
+  /* Change background color if needed */
+    width: 80%;
 }
 
 .image-column {
@@ -172,8 +172,6 @@ header {
     max-width: 300px; /* Adjust max width as needed */
     margin: 0 10px; /* Adjust margin as needed */
 }
-
-
 
 
 
