@@ -11,3 +11,5 @@ setInterval(showNextBanner, 5000);
 
 // Initialize the first banner as active
 banners[currentIndex].classList.add('active');
+
+
