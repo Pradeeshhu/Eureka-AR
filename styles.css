@@ -189,11 +189,28 @@ header {
     height: 60px;
 }
 
+.Subscribe {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    margin: 50px; /* Add margin on all sides */
+}
+
+.Subscribe img {
+    width: 100%; /* Scale the image to 100% of the parent container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure image does not overflow the container */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+
+
 .Top_Dest_text {
     display: flex;
     justify-content: center;
     max-width: 800px;
     text-align: right;
+    
 }
 
 * {
