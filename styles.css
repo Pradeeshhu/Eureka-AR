@@ -192,7 +192,7 @@ header {
 .Subscribe {
     display: flex;
     justify-content: center;
-    max-width: 100%;
+    max-width: 80%;
     margin: 0px; /* Add margin on all sides */
 }
 
