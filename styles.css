@@ -192,8 +192,9 @@ header {
 .Subscribe {
     display: flex;
     justify-content: center;
-    max-width: 80%;
+    max-width: 100%;
     margin: 0px; /* Add margin on all sides */
+    
 }
 
 .Subscribe img {
@@ -201,6 +202,7 @@ header {
     height: auto; /* Maintain aspect ratio */
     max-width: 100%; /* Ensure image does not overflow the container */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
+    
 }
 
 
