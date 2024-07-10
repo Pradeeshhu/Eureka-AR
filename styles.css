@@ -193,7 +193,7 @@ header {
     display: flex;
     justify-content: center;
     max-width: 100%;
-    margin: 50px; /* Add margin on all sides */
+    margin: 0px; /* Add margin on all sides */
 }
 
 .Subscribe img {
