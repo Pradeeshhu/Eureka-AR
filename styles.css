@@ -135,6 +135,15 @@ header {
 }
 
 
+.gradient-banner2 {
+    height: 10px;
+    width: 80%;
+    background: linear-gradient(to right, #6FBF10, #3AB081, #0787DE);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
 
 .content {
     width: 60%;
