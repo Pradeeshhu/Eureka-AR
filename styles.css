@@ -223,8 +223,8 @@ body {
 
 .card {
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     overflow: hidden;
     width: 100%;
     max-width: 300px;
@@ -251,7 +251,7 @@ body {
 
 .card-content p {
     font-size: 1em;
-    color: #666;
+    color: #f7f7f7;
 }
 
 @media (min-width: 600px) {
