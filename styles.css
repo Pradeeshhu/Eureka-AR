@@ -19,17 +19,13 @@ header {
     align-items: center;
     background-color: #000;
     color: #fff;
-    height: 50px;
-    width: 100%;
-    
+    padding: 10px 20px;
+    flex-wrap: wrap;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
-    margin-left: 100px;
-   
-  
 }
 
 .navbar ul {
@@ -42,8 +38,12 @@ header {
     font-size: 18px;
 }
 
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
 .auth-buttons button {
-    margin-left: 10px;
     padding: 10px 20px;
     font-size: 16px;
     border: none;
@@ -58,8 +58,6 @@ header {
 .signup {
     background-color: #ff4500;
     color: #fff;
-    margin-right: 100px;
-    
 }
 
 /* Banner styles */
@@ -68,7 +66,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 300px;
     width: 100%;
     text-align: center;
     overflow: hidden;
@@ -77,7 +75,7 @@ header {
 .banner h1 {
     position: absolute;
     z-index: 1;
-    font-size: 48px;
+    font-size: 24px;
     color: #fff;
 }
 
@@ -113,27 +111,22 @@ header {
     opacity: 1;
 }
 
-
-
-
 /* Adjust spacing around line break */
 .line-break {
     display: block; /* Ensure it behaves like a block element */
     height: 5px; /* Adjust the height as needed to control the space */
 }
 
-
 /* Gradient Banner styles */
 .gradient-banner {
-    height: 400px;
+    height: 300px;
     width: 100%;
     background: linear-gradient(to right, #6FBF10, #3AB081, #0787DE);
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    padding: 20px;
 }
-
 
 .gradient-banner2 {
     height: 10px;
@@ -142,11 +135,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-   
 }
 
 .content {
-    width: 60%;
+    width: 80%;
     text-align: center;
     color: #fff;
     margin-top: 30px;
@@ -155,19 +147,21 @@ header {
 
 .row {
     margin: 20px 0;
-    margin-top: 30px;
 }
 
 .columns {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .column {
-    width: 30%;
-    font-size: 24px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
+    margin: 10px 0;
 }
 
 .column img {
@@ -178,10 +172,7 @@ header {
 }
 
 /* Slider */
-
-
 .Top_Dest {
-
     display: flex;
     justify-content: center;
     margin-top: 50px;
@@ -194,7 +185,6 @@ header {
     justify-content: center;
     max-width: 100%;
     margin: 20px; /* Add margin on all sides */
-    
 }
 
 .Subscribe img {
@@ -202,34 +192,20 @@ header {
     height: auto; /* Maintain aspect ratio */
     max-width: 100%; /* Ensure image does not overflow the container */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
-    
 }
-
-
 
 .Top_Dest_text {
     display: flex;
     justify-content: center;
     max-width: 800px;
     text-align: right;
-    
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: white;
 }
 
 .container {
     display: flex;
     justify-content: center;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 .card-container {
@@ -242,8 +218,6 @@ body {
 
 .card {
     background-color: #fff;
-    /* border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     overflow: hidden;
     width: 100%;
     max-width: 300px;
@@ -285,14 +259,10 @@ body {
     }
 }
 
-
 .image-table {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    
-    row-gap: 1px; /* Space between rows */
-    column-gap: 5px; /* Space between columns */
-
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
     justify-content: center;
     max-width: 1000px; /* Set maximum width */
     margin: 0 auto; /* Center the grid */
@@ -319,11 +289,10 @@ body {
     height: auto;
 }
 
-
 .map-container {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 300px;
 }
 
 .map-container iframe {
@@ -335,20 +304,11 @@ body {
     border: 0;
 }
 
-
-
-/* Basic reset and styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Styling for footer */
+/* Footer styles */
 footer {
     background-color: #fff;
     color: #333;
-    height: 200px;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -358,11 +318,11 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    flex-wrap: wrap;
 }
 
 .footer-content p {
-    margin: 0;
+    margin: 10px 0;
 }
 
 .footer-links {
@@ -370,6 +330,7 @@ footer {
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .footer-links li {
@@ -385,3 +346,64 @@ footer {
     text-decoration: underline;
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 24px;
+    }
+
+    .gradient-banner, .gradient-banner2 {
+        height: auto;
+        padding: 20px;
+    }
+
+    .content {
+        width: 90%;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+    }
+
+    .Top_Dest {
+        margin: 20px 0;
+    }
+
+    .Subscribe img {
+        width: 100%;
+    }
+
+    .Top_Dest_text {
+        text-align: center;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header, .navbar, .auth-buttons {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner h1 {
+        font-size: 18px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+}
