@@ -12,6 +12,56 @@ body {
     background-color: #f4f4f4;
 }
 
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.nav-links, .auth-buttons, .dropdown-content {
+    box-sizing: border-box; /* Ensure these elements fit within their containers */
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        width: 100%;
+    }
+
+    .auth-buttons {
+        width: 100%;
+    }
+
+    .nav-links li, .auth-buttons button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Ensure navbar and its children fit within the viewport */
+.navbar, .navbar * {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Prevent large images from causing overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Example of adjusting specific elements */
+.nav-links, .auth-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Allow elements to wrap within their container */
+}
+
+
 
 
 .navbar {
