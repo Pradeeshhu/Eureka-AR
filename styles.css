@@ -303,6 +303,7 @@ img {
     max-width: 960px; /* Reduced max-width */
     margin: 0 auto;
     padding: 0 16px; /* Reduced padding */
+    margin-top: 20px;
 }
 
 .header-row {
