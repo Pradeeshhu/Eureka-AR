@@ -12,53 +12,189 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Header styles */
-header {
+
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000;
-    color: #fff;
     padding: 10px 20px;
-    flex-wrap: wrap;
+    background-color: #000000;
+    color: white;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+    margin-right: auto; /* Pushes the logo towards the left */
 }
 
-.navbar ul {
+.logo a {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
 }
 
-.navbar a {
-    color: #fff;
-    font-size: 18px;
+.logo img {
+    max-height: 50px; /* Adjust based on your logo size */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+.nav-links a:hover,
+.nav-links .dropdown:hover > a {
+    background-color: #2584c4;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2584c4;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+    z-index: 1000; /* Ensure the dropdown is above other content */
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+}
+
+.dropdown-content a:hover {
+    background-color: #1ba153;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .auth-buttons {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    margin-left: auto; /* Pushes the buttons towards the right */
 }
 
 .auth-buttons button {
-    padding: 10px 20px;
-    font-size: 16px;
+    background-color: #ce3b16;
     border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.auth-buttons button:hover {
+    background-color: #888888;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
     cursor: pointer;
 }
 
-.login {
-    background-color: #333;
-    color: #fff;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        border-bottom: 1px solid #444;
+        width: 100%;
+    }
+
+    .nav-links .dropdown-content {
+        position: static;
+        width: 100%;
+    }
+
+    .auth-buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .auth-buttons button {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-bottom: 10px;
+    }
 }
 
-.signup {
-    background-color: #ff4500;
-    color: #fff;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Banner styles */
 .banner {
@@ -66,7 +202,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 480px;
     width: 100%;
     text-align: center;
     overflow: hidden;
@@ -75,7 +211,7 @@ header {
 .banner h1 {
     position: absolute;
     z-index: 1;
-    font-size: 24px;
+    font-size: 48px;
     color: #fff;
 }
 
@@ -111,68 +247,119 @@ header {
     opacity: 1;
 }
 
+
+
+
 /* Adjust spacing around line break */
 .line-break {
     display: block; /* Ensure it behaves like a block element */
     height: 5px; /* Adjust the height as needed to control the space */
 }
 
-/* Gradient Banner styles */
-.gradient-banner {
-    height: 300px;
-    width: 100%;
-    background: linear-gradient(to right, #6FBF10, #3AB081, #0787DE);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
 
-.gradient-banner2 {
-    height: 10px;
-    width: 80%;
-    background: linear-gradient(to right, #6FBF10, #3AB081, #0787DE);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
+
+
+/* Gradient Banner styles */
+
+.gradient-banner {
+    background: linear-gradient(to right, #6FBF10, #3AB081, #0787DE); /* Updated gradient colors */
+    color: white;
+    padding: 16px; /* Reduced padding */
 }
 
 .content {
-    width: 80%;
-    text-align: center;
-    color: #fff;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    max-width: 960px; /* Reduced max-width */
+    margin: 0 auto;
+    padding: 0 16px; /* Reduced padding */
 }
 
-.row {
-    margin: 20px 0;
+.header-row {
+    text-align: center;
+}
+
+.header-row h2 {
+    font-size: 2em; /* Reduced font size */
+    margin-bottom: 8px; /* Reduced margin */
+}
+
+.header-row p {
+    font-size: 0.88em; /* Reduced font size */
+    line-height: 1.4; /* Adjusted line height */
 }
 
 .columns {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 16px; /* Reduced margin */
 }
 
 .column {
-    width: 100%;
-    max-width: 300px;
-    font-size: 18px;
-    font-weight: bold;
+    flex: 1 1 calc(33.333% - 40px); /* Adjust the width of columns */
+    margin: 8px; /* Reduced margin */
+    background: rgba(0, 0, 0, 0.3); /* Slight background for contrast */
+    padding: 16px; /* Reduced padding */
+    border-radius: 8px;
     text-align: center;
-    margin: 10px 0;
 }
 
 .column img {
-    display: block;
-    margin: 0 auto 10px;
-    width: 50px; /* Adjust size as needed */
-    height: 50px; /* Adjust size as needed */
+    max-width: 80px; /* Reduced image size */
+    height: auto;
+    margin-bottom: 12px; /* Reduced margin */
 }
 
+.column h3 {
+    font-size: 1.2em; /* Reduced font size */
+    margin-bottom: 8px; /* Reduced margin */
+}
+
+.column p {
+    font-size: 0.8em; /* Reduced font size */
+    line-height: 1.4;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .column {
+        flex: 1 1 100%; /* Full width on small screens */
+        margin: 8px 0; /* Adjust space for smaller screens */
+    }
+
+    .header-row h2 {
+        font-size: 1.6em; /* Reduced font size */
+    }
+
+    .header-row p {
+        font-size: 0.88em; /* Reduced font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-row h2 {
+        font-size: 1.2em; /* Reduced font size */
+    }
+
+    .header-row p {
+        font-size: 0.72em; /* Reduced font size */
+    }
+
+    .column img {
+        max-width: 64px; /* Reduced image size */
+    }
+}
+
+
+
+
+
 /* Slider */
+
+
 .Top_Dest {
+
     display: flex;
     justify-content: center;
     margin-top: 50px;
@@ -185,6 +372,7 @@ header {
     justify-content: center;
     max-width: 100%;
     margin: 20px; /* Add margin on all sides */
+    
 }
 
 .Subscribe img {
@@ -192,20 +380,34 @@ header {
     height: auto; /* Maintain aspect ratio */
     max-width: 100%; /* Ensure image does not overflow the container */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
+    
 }
+
+
 
 .Top_Dest_text {
     display: flex;
     justify-content: center;
     max-width: 800px;
     text-align: right;
+    
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
 }
 
 .container {
     display: flex;
     justify-content: center;
     padding: 20px;
-    flex-wrap: wrap;
 }
 
 .card-container {
@@ -218,6 +420,8 @@ header {
 
 .card {
     background-color: #fff;
+    /* border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     overflow: hidden;
     width: 100%;
     max-width: 300px;
@@ -259,10 +463,14 @@ header {
     }
 }
 
+
 .image-table {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    
+    row-gap: 1px; /* Space between rows */
+    column-gap: 5px; /* Space between columns */
+
     justify-content: center;
     max-width: 1000px; /* Set maximum width */
     margin: 0 auto; /* Center the grid */
@@ -289,10 +497,11 @@ header {
     height: auto;
 }
 
+
 .map-container {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 500px;
 }
 
 .map-container iframe {
@@ -304,11 +513,20 @@ header {
     border: 0;
 }
 
-/* Footer styles */
+
+
+/* Basic reset and styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for footer */
 footer {
     background-color: #fff;
     color: #333;
-    padding: 20px 0;
+    height: 200px;
     text-align: center;
 }
 
@@ -318,11 +536,11 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    height: 100%;
 }
 
 .footer-content p {
-    margin: 10px 0;
+    margin: 0;
 }
 
 .footer-links {
@@ -330,7 +548,6 @@ footer {
     padding: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .footer-links li {
@@ -344,66 +561,4 @@ footer {
 
 .footer-links li a:hover {
     text-decoration: underline;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .banner h1 {
-        font-size: 24px;
-    }
-
-    .gradient-banner, .gradient-banner2 {
-        height: auto;
-        padding: 20px;
-    }
-
-    .content {
-        width: 90%;
-    }
-
-    .column {
-        width: 100%;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .auth-buttons {
-        flex-direction: column;
-    }
-
-    .Top_Dest {
-        margin: 20px 0;
-    }
-
-    .Subscribe img {
-        width: 100%;
-    }
-
-    .Top_Dest_text {
-        text-align: center;
-        max-width: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    .header, .navbar, .auth-buttons {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .banner h1 {
-        font-size: 18px;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-links {
-        flex-direction: column;
-    }
 }

@@ -13,3 +13,16 @@ setInterval(showNextBanner, 5000);
 banners[currentIndex].classList.add('active');
 
 
+
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+
+function login() {
+    alert('Login clicked');
+}
+
+function signup() {
+    alert('Sign Up clicked');
+}

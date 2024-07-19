@@ -8,34 +8,78 @@
 </head>
 <body>
     
-    <nav class="navbar">
-        <div class="logo">
-            <a href="#"><img src="images/logo.png" alt="Logo"></a>
+     
+    
+    <!-- <header>
+        <div class="logo">Logo
         </div>
-        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li class="dropdown">
-                <a href="#">Company</a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Our Team</a></li>
-                    <li><a href="#">Our Mission</a></li>
-                    <li><a href="#">Press</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Partners</a></li>
-            <li><a href="#">Explore</a></li>
-        </ul>
+
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
         <div class="auth-buttons">
-            <button onclick="login()">Login</button>
-            <button onclick="signup()">Sign Up</button>
+            <button class="login">Login</button>
+            <button class="signup">Sign Up</button>
         </div>
-    </nav>
-    
+    </header> -->
+
+
+    <header>
+        <div class="logo">Logo</div>
+        <i class='bx bx-menu header__toggle' id="header-toggle"></i>
+        <nav class="nav navbar" id="nav-menu">
+            <div class="nav__content bd-grid">
+                <a href="" class="nav__perfil">
+                    <div class="nav__img">
+                        <img src="assets/img/EurekaAR_Logo.png" alt="">
+                    </div>
+                </a>
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#" class="nav__link active">Home</a></li>
+                        <li class="nav__item dropdown">
+                            <a href="#" class="nav__link dropdown__link">Company <i class='bx bx-chevron-down dropdown__icon'></i></a>
+                            <ul class="dropdown__menu">
+                                <li class="dropdown__item"><a href="#" class="nav__link">Our Team</a></li>
+                                <li class="dropdown__item"><a href="#" class="nav__link">Our Mission</a></li>
+                                <li class="dropdown__item"><a href="#" class="nav__link">Press</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav__item"><a href="#" class="nav__link">Partners</a></li>
+                        <li class="nav__item dropdown">
+                            <a href="#" class="nav__link dropdown__link">Explore <i class='bx bx-chevron-down dropdown__icon'></i></a>
+                            <ul class="dropdown__menu">
+                                <li class="dropdown__item"><a href="#" class="nav__link">test1</a></li>
+                                <li class="dropdown__item"><a href="#" class="nav__link">test2</a></li>
+                                <li class="dropdown__item"><a href="#" class="nav__link">test3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="auth-buttons">
+            <button class="login">Login</button>
+            <button class="signup">Sign Up</button>
+        </div>
+    </header>
 
 
     
+
+
+
+
+
+
     <section class="banner">
         <div class="banner-image" id="banner-image-1"></div>
         <div class="banner-image" id="banner-image-2"></div>
@@ -43,39 +87,37 @@
         <div class="banner-image" id="banner-image-4"></div>
         <h1>Welcome to Eureka!AR</h1>
     </section>
-
-
     <span class="line-break"></span>
-
 
     <section class="gradient-banner">
         <div class="content">
-            <div class="row header-row">
+            <div class="row">
                 <h2>WHY WE ARE THE BEST</h2>
-                <p>
-                    Welcome to the AR Experience Project! This innovative project showcases the wonders of Harrisburg through an augmented reality (AR) tour, providing an immersive and interactive experience for users.
+                <p>Welcome to the AR Experience Project! This innovative project showcases the wonders of Harrisburg through an augmented reality (AR) tour, providing an immersive and interactive experience for users.
                 </p>
             </div>
             <div class="row columns">
                 <div class="column">
                     <img src="images/1.png" alt="Amazing Experience Icon">
-                    <h3>Amazing Experience</h3>
-                    <p>Welcome to the AR Experience. This innovative project showcases the wonders of Harrisburg.</p>
+                    Amazing Experience 
+                   <h6> <p>Welcome to the AR Experience This innovative project showcases the wonders of Harrisburg 
+                    </p> </h6>
                 </div>
                 <div class="column">
                     <img src="images/2.png" alt="Discover Icon">
-                    <h3>Discover</h3>
-                    <p>Welcome to the AR Experience. This innovative project showcases the wonders of Harrisburg.</p>
+                    Discover
+                    <h6>  <p>Welcome to the AR Experience This innovative project showcases the wonders of Harrisburg 
+                    </p></h6>
                 </div>
                 <div class="column">
                     <img src="images/3.png" alt="Nice Support Icon">
-                    <h3>Nice Support</h3>
-                    <p>Welcome to the AR Experience. This innovative project showcases the wonders of Harrisburg.</p>
+                    Nice Support
+                    <h6><p>Welcome to the AR Experience This innovative project showcases the wonders of Harrisburg 
+                    </p></h6>
                 </div>
             </div>
         </div>
     </section>
-
 
     <section>
         <div class="Top_Dest">
