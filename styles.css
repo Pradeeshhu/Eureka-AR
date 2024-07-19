@@ -593,3 +593,144 @@ footer {
 .footer-links li a:hover {
     text-decoration: underline;
 }
+
+
+
+/* 
+------- filters*/
+
+
+.filters {
+    margin-top: 75px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px; /* Adjusted sidebar width */
+    height: 100%;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.filters h2 {
+    margin-bottom: 1rem;
+}
+
+.filters form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filter-group label {
+    font-weight: bold;
+}
+
+.filter-group select,
+.filter-group input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#min-time,
+#max-time {
+    width: 100%; /* Makes inputs take up full width of their container */
+    max-width: 60px; /* Adjust the max-width as needed */
+}
+
+.time-inputs {
+    display: flex;
+    gap: 0.5rem;
+}
+
+button[type="submit"] {
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Toggle button styling */
+.toggle-filters {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+
+.toggle-filters:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .filters {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        transform: translateX(-100%);
+    }
+    
+    .filters.open {
+        transform: translateX(0);
+    }
+    
+    .toggle-filters {
+        display: block;
+    }
+    
+    .time-inputs {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .filters {
+        padding: 0.5rem;
+    }
+    
+    .filter-group label,
+    .filter-group select,
+    .filter-group input,
+    button[type="submit"] {
+        font-size: 0.875rem;
+    }
+    
+    .filter-group select,
+    .filter-group input,
+    button[type="submit"] {
+        padding: 0.5rem;
+    }
+    
+    #min-time,
+    #max-time {
+        max-width: 100%; /* Ensure inputs fit within container on small screens */
+    }
+}

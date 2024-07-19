@@ -26,3 +26,9 @@ function login() {
 function signup() {
     alert('Sign Up clicked');
 }
+
+
+function toggleFilters() {
+    const filters = document.querySelector('.filters');
+    filters.classList.toggle('open');
+}
