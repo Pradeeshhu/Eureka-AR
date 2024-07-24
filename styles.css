@@ -71,6 +71,8 @@ img {
     padding: 10px 20px;
     background-color: #000000;
     color: white;
+    position: fixed;
+    z-index: 1000;
 }
 
 .logo {
@@ -389,6 +391,17 @@ img {
 /* Slider */
 
 
+.Explore_Realm {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 00px;
+    margin-bottom: 50px;
+    height: 60px;
+}
+
+
+
 .Top_Dest {
 
     display: flex;
@@ -607,13 +620,14 @@ footer {
     left: 0;
     width: 300px; /* Adjusted sidebar width */
     height: 100%;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     padding: 1rem;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease;
+    z-index: 1000;
 }
 
 .filters h2 {
