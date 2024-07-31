@@ -748,3 +748,17 @@ button[type="submit"]:hover {
         max-width: 100%; /* Ensure inputs fit within container on small screens */
     }
 }
+
+/* Distance input fields */
+#min-distance,
+#max-distance {
+    width: 100%; /* Makes inputs take up full width of their container */
+    max-width: 120px; /* Adjust the max-width as needed */
+}
+
+/* Cost input fields */
+#min-cost,
+#max-cost {
+    width: 100%; /* Makes inputs take up full width of their container */
+    max-width: 120px; /* Adjust the max-width as needed */
+}
