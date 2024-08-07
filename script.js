@@ -45,3 +45,10 @@ window.addEventListener('scroll', function() {
         sidebar.classList.remove('moving');
     }
 });
+
+// script.js
+
+function toggleFilters() {
+    const filters = document.querySelector('.filters');
+    filters.classList.toggle('open');
+}

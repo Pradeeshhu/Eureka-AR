@@ -35,9 +35,30 @@
     
 
     <aside class="filters">
-        <h2>Filters</h2>
+        <h2>Library</h2>
         <form id="filter-form">
+
+
+
             <div class="filter-group">
+
+
+                <label for="purchased">
+                    <input type="checkbox" name="purchased" id="purchased">
+                    <i class="icon-purchased"></i> Purchased
+                </label>
+                <label for="wishlist">
+                    <input type="checkbox" name="wishlist" id="wishlist">
+                    <i class="icon-wishlist"></i> Wishlist
+                </label>
+                <label for="created-by-me">
+                    <input type="checkbox" name="created-by-me" id="created-by-me">
+                    <i class="icon-created-by-me"></i> Created by Me
+                </label>
+
+            &nbsp; 
+            &nbsp;
+            
                 <label for="accessibility">Accessibility</label>
                 <select id="accessibility" name="accessibility">
                     <option value="all">All</option>
@@ -59,6 +80,8 @@
                     <input type="number" id="max-distance" name="max-distance" placeholder="Max Distance">
                 </div>
             </div>
+
+
             <div class="filter-group">
                 <label for="cost">Cost</label>
                 <div class="time-inputs">
@@ -143,32 +166,11 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-
 <div class="container">
 
     
     
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <footer>
     <div class="footer-content">
@@ -181,9 +183,6 @@
         </ul>
     </div>
 </footer>
-
-
-
 
     <script src="script.js"></script>
 </body>

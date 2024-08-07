@@ -609,20 +609,16 @@ footer {
 
 
 
-/* 
-------- filters*/
-
-
+/* Filters */
 .filters {
     margin-top: 75px;
     position: fixed;
     top: 0;
     left: 0;
-    width: 300px; /* Adjusted sidebar width */
+    width: 300px;
     height: 100%;
     background-color: #ffffff;
     padding: 1rem;
-    /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -648,19 +644,26 @@ footer {
 
 .filter-group label {
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .filter-group select,
-.filter-group input {
+.filter-group input[type="checkbox"] {
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
+.filter-group input[type="checkbox"] {
+    width: auto;
+}
+
 #min-time,
 #max-time {
-    width: 100%; /* Makes inputs take up full width of their container */
-    max-width: 60px; /* Adjust the max-width as needed */
+    width: 100%;
+    max-width: 60px;
 }
 
 .time-inputs {
@@ -745,20 +748,36 @@ button[type="submit"]:hover {
     
     #min-time,
     #max-time {
-        max-width: 100%; /* Ensure inputs fit within container on small screens */
+        max-width: 100%;
     }
 }
 
 /* Distance input fields */
 #min-distance,
 #max-distance {
-    width: 100%; /* Makes inputs take up full width of their container */
-    max-width: 120px; /* Adjust the max-width as needed */
+    width: 100%;
+    max-width: 120px;
 }
 
 /* Cost input fields */
 #min-cost,
 #max-cost {
-    width: 100%; /* Makes inputs take up full width of their container */
-    max-width: 120px; /* Adjust the max-width as needed */
+    width: 100%;
+    max-width: 120px;
+}
+
+/* Icon styles */
+.icon-purchased::before {
+    content: url('path/to/purchased-icon.svg'); /* replace with your icon path */
+    display: inline-block;
+}
+
+.icon-wishlist::before {
+    content: url('path/to/wishlist-icon.svg'); /* replace with your icon path */
+    display: inline-block;
+}
+
+.icon-created-by-me::before {
+    content: url('path/to/created-by-me-icon.svg'); /* replace with your icon path */
+    display: inline-block;
 }
