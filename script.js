@@ -52,3 +52,54 @@ function toggleFilters() {
     const filters = document.querySelector('.filters');
     filters.classList.toggle('open');
 }
+
+
+// --------------------
+
+
+// script.js
+document.addEventListener('DOMContentLoaded', function () {
+    const cartItems = document.getElementById('cart-items');
+    const totalElement = document.getElementById('total');
+    const checkoutButton = document.getElementById('checkout');
+    let total = 0;
+
+    // Add to Cart
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', function () {
+            const name = this.getAttribute('data-name');
+            const price = parseFloat(this.getAttribute('data-price'));
+
+            // Create list item for the cart
+            const li = document.createElement('li');
+            li.textContent = `${name} - $${price.toFixed(2)}`;
+            li.dataset.price = price;
+
+            // Create delete button
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Remove';
+            deleteButton.addEventListener('click', function () {
+                total -= price;
+                totalElement.textContent = `Total: $${total.toFixed(2)}`;
+                cartItems.removeChild(li);
+            });
+
+            li.appendChild(deleteButton);
+            cartItems.appendChild(li);
+
+            // Update total
+            total += price;
+            totalElement.textContent = `Total: $${total.toFixed(2)}`;
+        });
+    });
+
+    // Checkout
+    checkoutButton.addEventListener('click', function () {
+        if (total > 0) {
+            alert(`Proceeding to payment gateway with total amount: $${total.toFixed(2)}`);
+            window.location.href = 'https://www.paymentgateway.com';  // Simulate redirect to payment gateway
+        } else {
+            alert('Your cart is empty! Please add items to the cart before checking out.');
+        }
+    });
+});
