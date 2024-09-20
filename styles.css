@@ -821,3 +821,33 @@ button[type="submit"]:hover {
 .search-container button:hover {
     background-color: #0056b3;
 }
+
+
+
+
+
+.column-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.column-container.small .small-column {
+    width: 79px;
+    height: 27px;
+    background-color: #000000; /* Black background */
+    border-radius: 6px;
+    color: #ffffff; /* White text */
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Pointer cursor for buttons */
+    padding: 0; /* Reset padding */
+}
+
+.column-container.small .small-column:hover {
+    background-color: #333333; /* Slightly lighter color on hover */
+}
